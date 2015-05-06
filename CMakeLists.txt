@@ -27,7 +27,7 @@ link_directories(
   ${SBPL_LIBRARY_DIRS}
 )
 
-add_library(${PROJECT_NAME} src/SbplPlanner.cpp)
+add_library(${PROJECT_NAME} src/SbplPlanner.cpp src/grid2D.cpp)
 target_link_libraries(${PROJECT_NAME}
  	${catkin_LIBRARIES}
  	${SBPL_LIBRARIES}
