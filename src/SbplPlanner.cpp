@@ -42,13 +42,13 @@ bool SbplPlanner::initialize(const ros::NodeHandle& n)
 bool SbplPlanner::loadParameters(const ros::NodeHandle& n)
 {
 	//plann update rate
-	rate = 3;
+	rate = 0.5;
 
 	//goal pos
-	goal_pos = gu::Vec3(1.8,2.5,0);
+	goal_pos = gu::Vec3(1.8,2.5,0); //need to change in matlab also
 
 	//map parameter
-	grid_size = 0.1;
+	grid_size = 0.2;
 	fan_R = 0.5;
 	//build map
 	map = new Grid2D(grid_size,fan_R);
