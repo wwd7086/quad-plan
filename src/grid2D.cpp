@@ -11,7 +11,7 @@ Grid2D::Grid2D(float grid_size, float fan_R)
 	this->fan_R = fan_R;
 
 	X_ORIGIN_IN_WORLD = -1.05;
-    Y_ORIGIN_IN_WORLD -1.44;
+    Y_ORIGIN_IN_WORLD = -1.44;
 	X_LENGTH_WORLD = 2.9;
 	Y_LENGTH_WORLD = 3.94;
 
@@ -35,7 +35,7 @@ void Grid2D::plotMap()
 {
 	for (int y = 0; y < y_width; y++) {
 		for (int x = 0; x < x_width; x++) {
-			//std::cout << (int)grid2D_map[x][y] << " ";
+			ROS_INFO_STREAM((int)grid2D_map[x][y]<<" ");
 		}
 	}
 }
@@ -105,8 +105,8 @@ int Grid2D::findGrid(float value, char axis)
 
 geometry_utils::Vec3 Grid2D::findGrids(geometry_utils::Vec3 values)
 {
-	geometry_utils::Vec3 result(findGrid(values.x(),'x'),
-								findGrid(values.y(),'y'),
+	geometry_utils::Vec3 result(findGrid(values.x(),'X'),
+								findGrid(values.y(),'Y'),
 								0);
 	return result;
 }

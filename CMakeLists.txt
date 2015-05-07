@@ -4,6 +4,7 @@ project(sbpl_plan)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   geometry_utils
+  geometry_msgs
   nav_msgs
 )
 
@@ -13,7 +14,7 @@ pkg_check_modules(SBPL REQUIRED sbpl)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS roscpp geometry_utils nav_msgs
+  CATKIN_DEPENDS roscpp geometry_utils geometry_msgs nav_msgs
   DEPENDS system_lib sbpl
 )
 

@@ -4,7 +4,6 @@
 #include <ros/ros.h>
 #include <sbpl_plan/grid2D.h>
 #include <nav_msgs/Odometry.h>
-#include <nav_msgs/Path.h>
 #include <geometry_utils/GeometryUtils.h>
 #include <sbpl/headers.h>
 
